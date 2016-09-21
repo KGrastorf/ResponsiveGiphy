@@ -23,3 +23,63 @@ footer {
   text-align: center;
   padding-top: 25px;
 }
+
+.giphyPlacement {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+
+@@media only screen and (max-width: 1000px) {
+  header {
+    display: none;
+    text-align: center;
+    }
+  }
+  header img {
+    width: 100vw;
+    height: auto;
+  }
+  header h1 h2 {
+    width: 100vw;
+  }
+}
+
+.headersm .menu ul {
+  padding: 0;
+  margin: 0;
+}
+.headersm .menu ul li {
+  display: inline-block;
+  float: left;
+  list-style: none;
+  padding: 0 0 0 5px;
+  margin: 0;
+}
+.headersm .menuIcon {
+  display: none;
+  background: #000;
+  width: 100%;
+  text-align: center;
+}
+.headersm .menuIcon:hover {
+  background: #999;
+}
+.headersm .menuIcon a {
+  width: 100%;
+  display: inline-block;
+  color: #fff;
+}
+.header .menuIcon a img {
+  vertical-align: middle;
+}
+
+$(function() {
+    $("a[href=#menuExpand]").click(function(e) {
+        $(".menu").toggleClass("menuOpen");
+        e.preventDefault();
+    });
+});
